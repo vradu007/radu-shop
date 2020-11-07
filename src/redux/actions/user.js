@@ -1,24 +1,24 @@
 import { signInWithGoogle, signOut } from '../../apis/firebase/firebase';
 
-function startLoading() {
+const startLoading = () => {
     return {
         type: 'START_LOADING'
     }
 }
-function updateUserData(payload) {
+const updateUserData = (payload) => {
     return {
         type: 'UPDATE_USER_DATA',
         payload
     }
 }
-function updateUserError(payload) {
+const updateUserError = (payload) => {
     return {
         type: 'UPDATE_USER_ERROR',
         payload
     }
 }
 
-export function loginUser() {
+const loginUser = () => {
     return (dispatch) => {
         dispatch(startLoading());
 
@@ -30,7 +30,7 @@ export function loginUser() {
     }
 }
 
-export function logoutUser() {
+const logoutUser = () => {
     return dispatch => {
         dispatch(startLoading());
 
@@ -41,3 +41,5 @@ export function logoutUser() {
         });
     }
 }
+
+export {loginUser, logoutUser};

@@ -4,7 +4,7 @@ const initialState = {
     error: null
 };
 
-export function userReducer(state = initialState, action) {
+const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'START_LOADING':
             return Object.assign({}, state, {
@@ -25,3 +25,5 @@ export function userReducer(state = initialState, action) {
             return state
     }
 }
+
+export {userReducer};

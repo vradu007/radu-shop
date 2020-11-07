@@ -10,7 +10,7 @@ import Page404 from './pages/Page404/Page404';
 import Product from './pages/Product/Product';
 import './utils/utility-classes.css';
 
-function App() {
+const App = () => {
   return(
     <div className="app">
       <Switch>
