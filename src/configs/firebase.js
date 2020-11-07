@@ -1,12 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBGO_ah8zTC7yROsyIVMDs_JwFHDmBUjV8",
-    authDomain: "radu-shop.firebaseapp.com",
-    databaseURL: "https://radu-shop.firebaseio.com",
-    projectId: "radu-shop",
-    storageBucket: "radu-shop.appspot.com",
-    messagingSenderId: "868002289916",
-    appId: "1:868002289916:web:53ae3d76f4907301639f79",
-    measurementId: "G-GG9G7JYH86"
-  };
+    apiKey: "AIzaSyCcbZMkwd4ZV_1DiH0R3TZFCg9GKaIMeoM",
+    authDomain: "react-sirluggia-shop.firebaseapp.com",
+    databaseURL: "https://react-sirluggia-shop.firebaseio.com",
+    projectId: "react-sirluggia-shop",
+    storageBucket: "react-sirluggia-shop.appspot.com",
+    messagingSenderId: "184253035461",
+    appId: "1:184253035461:web:20fe5c173c7675c74c51ac"
+};
 
 export default firebaseConfig;

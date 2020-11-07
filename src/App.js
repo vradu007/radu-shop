@@ -1,14 +1,14 @@
 import React from 'react';
+import { Route, Switch } from "react-router-dom";
 import './App.css';
-import { Switch, Route } from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
-import Login from './pages/Login';
-import Page404 from './pages/Page404';
-import Category from './pages/Category';
-import Cart from './pages/Cart';
+import About from './pages/About/About';
+import Cart from './pages/Cart/Cart';
+import Category from './pages/Category/Category';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Page404 from './pages/Page404/Page404';
+import Product from './pages/Product/Product';
 import './utils/utility-classes.css';
-import Product from './pages/Product';
 
 function App() {
   return(
