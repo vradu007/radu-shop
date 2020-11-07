@@ -1,36 +1,25 @@
-import React, { Component } from 'react';
-import Layout from '../../components/Layout/Layout';
-import products from '../../utils/products.json';
-import ProductList from '../../components/ProductList/ProductList';
+import React, { useState, useEffect } from "react";
+import Layout from "../../components/Layout/Layout";
+import products from "../../utils/products.json";
+import ProductList from "../../components/ProductList/ProductList";
 
-class Category extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            category: {},
-            items: []
-        }
-    }
-
-    componentDidMount() {
-        const { match } = this.props;
-        const categoryName = match.params.categoryName;
-        this.setState({
-            category: products[categoryName],
-            items: products[categoryName].items
-        });
-    }
-
-    render() {
-        return (
-            <Layout>
-                <div className="container-fluid container-min-max-width">
-                    <h2>{ this.state.category.name }</h2>
-                    <ProductList products={this.state.items} />
-                </div>
-            </Layout>
-        );
-    }
-}
+const Category = (props) => {
+	const [category, setCategory] = useState({});
+	const [items, setItems] = useState([]);
+	const { match } = props;
+	const categoryName = match.params.categoryName;
+	useEffect(() => {
+		setCategory(products[categoryName]);
+		setItems(products[categoryName].items);
+	},[categoryName]);
+	return (
+		<Layout>
+			<div className="container-fluid container-min-max-width">
+				<h2>{category.name}</h2>
+				<ProductList products={items} />
+			</div>
+		</Layout>
+	);
+};
 
 export default Category;

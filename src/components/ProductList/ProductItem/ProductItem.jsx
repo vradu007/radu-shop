@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { addToCart } from '../../../redux/actions/cart';
 import { Link } from 'react-router-dom';
 
-function ProductItem(props) {
+const ProductItem = (props) => {
     const {name, price, currency, image, id} = props;
 
     return(

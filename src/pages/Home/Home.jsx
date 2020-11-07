@@ -1,40 +1,33 @@
-import React from 'react';
-import Layout from '../../components/Layout/Layout';
-import products from '../../utils/products.json';
-import HomeCategory from './../../components/HomeCategory/HomeCategory'
+import React, { useState, useEffect } from "react";
+import Layout from "../../components/Layout/Layout";
+import products from "../../utils/products.json";
+import HomeCategory from "./../../components/HomeCategory/HomeCategory";
 
-class Home extends React.Component{
-    constructor() {
-        super();
-        this.state = {
-            categories: []
-        }
-    }
+const Home = () => {
+	const [categories, setCategories] = useState([]);
 
-    componentDidMount() {
-        const categories = Object.keys(products);
-        this.setState({categories});
-    }
+	useEffect(() => {
+		const payload = Object.keys(products);
+		setCategories(payload);
+	}, []);
 
-    render() {
-        return(
-            <Layout>
-                <div className="container-fluid container-min-max-width">
-                    <div className="row">
-                        {this.state.categories.map((category, index) =>
-                            <HomeCategory
-                                key={index}
-                                route={category}
-                                name={products[category].name}
-                                description={products[category].description}
-                                image={products[category].image}
-                            />
-                        )}
-                    </div>
-                </div>
-            </Layout>
-        );
-    }
-}
+	return (
+		<Layout>
+			<div className="container-fluid container-min-max-width">
+				<div className="row">
+					{categories.map((category, index) => (
+						<HomeCategory
+							key={index}
+							route={category}
+							name={products[category].name}
+							description={products[category].description}
+							image={products[category].image}
+						/>
+					))}
+				</div>
+			</div>
+		</Layout>
+	);
+};
 
 export default Home;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Page404() {
+const Page404 = () => {
     return(
         <div>
             <h1>404</h1>
