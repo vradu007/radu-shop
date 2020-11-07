@@ -1,10 +1,12 @@
+import {reduxConstants as Constants} from '../../utils/constants';
+
 const initialState = {
     products: []
 }
 
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD_TO_CART':
+        case Constants.addToCart:
             let productInCart = false;
             const updatedProducts = state.products.map(product => {
                 if (product.id === action.payload.product.id) {
@@ -33,7 +35,7 @@ const cartReducer = (state = initialState, action) => {
                     products: updatedProducts
                 });
             }
-        case 'REMOVE_FROM_CART':
+        case Constants.removeFromCart:
             const filteredProducts = state.products.filter(product => {
                 return product.id !== action.payload.id
             });

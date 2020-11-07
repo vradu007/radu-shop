@@ -1,13 +1,15 @@
+import {reduxConstants as Constants} from '../../utils/constants';
+
 const addToCart = (payload) => {
     return {
-        type: 'ADD_TO_CART',
+        type: Constants.addToCart,
         payload
     }
 }
 
 const removeFromCart = (payload) => {
     return {
-        type: 'REMOVE_FROM_CART',
+        type: Constants.removeFromCart,
         payload
     }
 }
