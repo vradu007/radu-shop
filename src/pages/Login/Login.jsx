@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.png";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
 import "./Login.css";
 import { connect } from "react-redux";
-import { loginUser } from "../../redux/actions/user";
+import { loginUser } from "../../redux/user/userAction";
 
 const usePrevious = (value) => {
 	const ref = useRef();

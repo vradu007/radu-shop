@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { removeFromCart } from '../../redux/actions/cart';
+import { removeFromCart } from '../../redux/cart/cartAction';
 import { ReactComponent as Close } from '../../assets/icons/close.svg';
 import Layout from '../../components/Layout/Layout';
 import './Cart.css';
