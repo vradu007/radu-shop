@@ -1,35 +1,52 @@
-import { signInWithGoogle, signOut } from "../../apis/firebase/firebase";
-import { reduxConstants as Constants } from "../../utils/constants";
+import {
+	signInWithFacebook,
+	signInWithGoogle,
+	signOut,
+} from "../../apis/firebase/firebase";
+import { reduxConstants, providerConstants } from "../../utils/constants";
 
 const startLoading = () => {
 	return {
-		type: Constants.userStartLoading,
+		type: reduxConstants.userStartLoading,
 	};
 };
 const updateUserData = (payload) => {
 	return {
-		type: Constants.updateUserData,
+		type: reduxConstants.updateUserData,
 		payload,
 	};
 };
 const updateUserError = (payload) => {
 	return {
-		type: Constants.updateUserError,
+		type: reduxConstants.updateUserError,
 		payload,
 	};
 };
 
-const loginUser = () => {
+const loginUser = (provider) => {
 	return (dispatch) => {
 		dispatch(startLoading());
 
-		signInWithGoogle()
-			.then((userData) => {
-				dispatch(updateUserData(userData.user));
-			})
-			.catch((error) => {
-				dispatch(updateUserError(error));
-			});
+		switch (provider) {
+			case providerConstants.google:
+				signInWithGoogle()
+					.then((userData) => {
+						dispatch(updateUserData(userData.user));
+					})
+					.catch((error) => {
+						dispatch(updateUserError(error));
+                    });
+                break;
+			case providerConstants.facebook:
+				signInWithFacebook()
+					.then((userData) => {
+						dispatch(updateUserData(userData.user));
+					})
+					.catch((error) => {
+						dispatch(updateUserError(error));
+                    });
+                break;
+		}
 	};
 };
 

@@ -6,4 +6,12 @@ const reduxConstants = {
     updateUserError: "UPDATE_USER_ERROR",
 };
 
-export {reduxConstants};
+const providerConstants = {
+    google: "SIGN_IN_WITH_GOOGLE",
+    facebook: "SIGN_IN_WITH_FACEBOOK",
+}
+
+export {
+    reduxConstants,
+    providerConstants,
+};

@@ -3,12 +3,23 @@ import 'firebase/auth';
 import firebaseConfig from '../../configs/firebase';
 
 firebase.initializeApp(firebaseConfig);
-const googleProvider = new firebase.auth.GoogleAuthProvider()
+const googleProvider = new firebase.auth.GoogleAuthProvider();
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
-export const signOut = function() {
+const signOut = () => {
     return firebase.auth().signOut();
 }
 
-export const signInWithGoogle = function() {
+const signInWithGoogle = () => {
     return firebase.auth().signInWithPopup(googleProvider);
+}
+
+const signInWithFacebook = () => {
+    return firebase.auth().signInWithPopup(facebookProvider);
+}
+
+export {
+    signOut,
+    signInWithGoogle,
+    signInWithFacebook,
 }

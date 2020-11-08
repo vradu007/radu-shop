@@ -2,29 +2,32 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
+import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import "./Login.css";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/user/userAction";
+import { providerConstants, reduxConstants} from "../../utils/constants";
 
 const Login = (props) => {
-	// componentDidUpdate(prevProps) {
-	//     if (this.props.user !== prevProps.user) {
-	//         this.props.history.push('/');
-	//     }
-    // }
-    
 
     const [redirect, changeRedirect] = useState(false);
-	const { user, history, signInWithGoogle } = props;
+	const { user, history, signInWithGoogle, signInWithFacebook } = props;
 	useEffect(() => {
         if(redirect){
             history.push("/");
         }
 	}, [user, history]);
 
-    const handleClick = () => {
+    const handleClick = (provider) => {
         changeRedirect(true);
-        signInWithGoogle();
+        switch(provider){
+            case providerConstants.facebook:
+                signInWithFacebook();
+                break;
+            case providerConstants.google:
+                signInWithGoogle();
+                break;
+        }
     }
 
 	return (
@@ -33,13 +36,20 @@ const Login = (props) => {
 				<img src={Logo} alt="logo" className="mb-5" />
 			</Link>
 			<h1 className="h2">Login</h1>
-			<p>Alege providerul cu care vrei să vrei să te loghezi:</p>
+			<p>Choose the provider you want to use to login:</p>
 			<button
 				className="btn btn-outline-dark d-flex align-items-center"
-				onClick={() => handleClick()}
+                onClick={() => handleClick(providerConstants.google)}
 			>
 				<Google className="w-50 mr-3" />
-				<span className="text-nowrap">Loghează-te cu Google</span>
+				<span className="text-nowrap">Login with Google</span>
+			</button>
+            <button 
+				className="btn btn-outline-dark d-flex align-items-center m-2"
+				onClick={() => handleClick(providerConstants.facebook)}
+			>
+				<Facebook className="w-50 mr-3" />
+				<span className="text-nowrap">Login with Facebook</span>
 			</button>
 		</div>
 	);
@@ -53,7 +63,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		signInWithGoogle: () => dispatch(loginUser()),
+        signInWithGoogle: () => dispatch(loginUser(providerConstants.google)),
+        signInWithFacebook: () => dispatch(loginUser(providerConstants.facebook)),
 	};
 }
 
