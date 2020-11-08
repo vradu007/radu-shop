@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
@@ -6,28 +6,26 @@ import "./Login.css";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/user/userAction";
 
-const usePrevious = (value) => {
-	const ref = useRef();
-	useEffect(() => {
-		ref.current = value;
-	});
-	return ref.current;
-}
-
 const Login = (props) => {
 	// componentDidUpdate(prevProps) {
 	//     if (this.props.user !== prevProps.user) {
 	//         this.props.history.push('/');
 	//     }
-	// }
-	console.log(props);
-	const { user, history } = props;
-	const previous = usePrevious({ user, history });
+    // }
+    
+
+    const [redirect, changeRedirect] = useState(false);
+	const { user, history, signInWithGoogle } = props;
 	useEffect(() => {
-		if (props.user !== previous.user) {
-			props.history.push("/");
-		}
-	}, [props.user, props.history, previous.user]);
+        if(redirect){
+            history.push("/");
+        }
+	}, [user, history]);
+
+    const handleClick = () => {
+        changeRedirect(true);
+        signInWithGoogle();
+    }
 
 	return (
 		<div className="login-page">
@@ -38,7 +36,7 @@ const Login = (props) => {
 			<p>Alege providerul cu care vrei să vrei să te loghezi:</p>
 			<button
 				className="btn btn-outline-dark d-flex align-items-center"
-				onClick={() => props.signInWithGoogle()}
+				onClick={() => handleClick()}
 			>
 				<Google className="w-50 mr-3" />
 				<span className="text-nowrap">Loghează-te cu Google</span>

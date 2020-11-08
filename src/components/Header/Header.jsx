@@ -15,13 +15,13 @@ const Header = (props) => {
                 </Link>
                 <div>
                     { props.user
-                        ? <p>Salut, {props.user.displayName}!</p>
+                        ? <p>Hello, {props.user.displayName}!</p>
                         : null
                     }
                     <div className="d-flex justify-content-end">
                         { props.user
-                            ? <p className="logout h5" onClick={() => props.signOut()}>Delogare</p>
-                            : <Link to="/login" className="h5 mb-0">Logare</Link>
+                            ? <p className="logout h5" onClick={() => props.signOut()}>Logout</p>
+                            : <Link to="/login" className="h5 mb-0">Login</Link>
                         }
                         <div className="d-flex align-items-center">
                             <Link to="/cart" className="d-flex">
