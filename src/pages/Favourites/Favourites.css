@@ -1,0 +1,7 @@
+.favourites-page img{
+    max-height: 100px;
+}
+
+.favourites-page svg {
+    cursor: pointer;
+}

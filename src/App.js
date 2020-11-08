@@ -10,6 +10,7 @@ import Page404 from './pages/Page404/Page404';
 import Product from './pages/Product/Product';
 import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions';
 import './utils/utility-classes.css';
+import Favourites from './pages/Favourites/Favourites'
 
 const App = () => {
   return(
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/login" component={Login}/>
         <Route exact path="/" component={Home}/>
         <Route path="/cart" component={Cart}/>
+        <Route path="/favourites" component={Favourites}/>
         <Route path="/about" component={About}/>
         <Route path="/terms-and-conditions" component={TermsAndConditions}/>
         <Route path="/category/:categoryName" component={Category}/>
