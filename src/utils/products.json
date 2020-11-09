@@ -1,48 +1,48 @@
 {
-    "shoes": {
+    "processors": {
         "items": [
             {
                 "id": 1,
-                "name": "Sneakerși piele Massimo Dutti",
-                "price": 135,
-                "currency": "LEI",
+                "name": "Ryzen 9 5950x",
+                "price": 799,
+                "currency": "USD",
                 "image": "https://i.imgur.com/Rz8lVQa.jpg",
-                "size": 45,
-                "colour": "Negru",
-                "material": "Piele",
-                "brand": "Massimo Dutti",
-                "description": "Sneakerși din piele cu talpă inițial albă, din colecția de toamnă-iarnă 2019, Massimo Dutti."
+                "cores": 16,
+                "threads": 32,
+                "build-process": "7nm",
+                "producer": "AMD",
+                "description": "The best gaming processor on the market"
             },
             {
                 "id": 2,
-                "name": "Teniși negri Polo Ralph Lauren",
-                "price": 100,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/Og3Oh24.jpg",
-                "size": 45,
-                "colour": "Negru",
-                "material": "Pânză",
-                "brand": "Polo Ralph Lauren",
-                "description": "Teniși din pânză cu talpă inițial albă, din colecția de primăvară-vară 2019, Fashion Days."
+                "name": "Ryzen 9 5900x",
+                "price": 549,
+                "currency": "USD",
+                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "cores": 12,
+                "threads": 24,
+                "build-process": "7nm",
+                "producer": "AMD",
+                "description": "The flagship - The battleship"
             },
             {
                 "id": 3,
-                "name": "Ghete din piele maro Massimo",
-                "price": 185,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/zoqSu87.jpg",
-                "size": 45,
-                "colour": "Maro",
-                "material": "Piele",
-                "brand": "Massimo Dutti",
-                "description": "Ghete maro din piele, din colecția de toamnă-iarnă 2017, Massimo Dutti."
+                "name": "Ryzen 5 5600x",
+                "price": 299,
+                "currency": "USD",
+                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "cores": 6,
+                "threads": 12,
+                "build-process": "7nm",
+                "producer": "AMD",
+                "description": "The best bang for the buck gaming option"
             }
         ],
         "image": "https://i.imgur.com/X0qldXO.jpg",
-        "name": "Încălțăminte",
-        "description": "Ghete, pantofi, sneakerși: finețe garantată!"
+        "name": "Processors",
+        "description": "The heart of any pc build!"
     },
-    "sweaters": {
+    "video-cards": {
         "items": [
             {
                 "id": 4,
@@ -94,10 +94,10 @@
             }
         ],
         "image": "https://i.imgur.com/SZU7liE.jpg",
-        "name": "Pulovere",
-        "description": "Pulovărașe elegănțele, slim, clasă superioară."
+        "name": "Video Cards",
+        "description": "The gaming powerhouses getting you through your gaming sessions."
     },
-    "pants": {
+    "motherboards": {
         "items": [
             {
                 "id": 8,
@@ -125,10 +125,10 @@
             }
         ],
         "image": "https://i.imgur.com/srQCDRN.jpg",
-        "name": "Pantaloni/blugi",
-        "description": "Jeanși și pantaloni pentru baieții care și-o ard patroni!"
+        "name": "Motherboards",
+        "description": "The backbone of your brand new pc"
     },
-    "jackets": {
+    "ram-modules": {
         "items": [
             {
                 "id": 10,
@@ -156,10 +156,10 @@
             }
         ],
         "image": "https://i.imgur.com/81I6Oab.jpg",
-        "name": "Geci/Haine",
-        "description": "Confortabile, călduroase și nu arăți ca un cartof!"
+        "name": "Ram modules",
+        "description": "Speed up your performance"
     },
-    "tshirts": {
+    "storage": {
         "items": [
             {
                 "id": 12,
@@ -199,10 +199,10 @@
             }
         ],
         "image": "https://i.imgur.com/l27WtFL.jpg",
-        "name": "Tricouri",
-        "description": "Și de băiețeală și de sport."
+        "name": "Storage",
+        "description": "You won't have time to grab a coffee while the game is loading :("
     },
-    "accesories": {
+    "power-supply": {
         "items": [
             {
                 "id": 15,
@@ -230,7 +230,7 @@
             }
         ],
         "image": "https://i.imgur.com/qw3wDj8.jpg",
-        "name": "Accesorii",
-        "description": "Fulare, căciuli, mănuși: nu mai sta pe gânduri, cumpără-le acuși!"
+        "name": "Power supplies",
+        "description": "Even supports the RTX 3000 series (paper edition)"
     }
 }
