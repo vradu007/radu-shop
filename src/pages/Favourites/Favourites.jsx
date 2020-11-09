@@ -23,13 +23,19 @@ const Favourites = (props) => {
 									key={product.id}
 								>
 									<div className="w-50 d-flex flex-column justify-content-center align-items-center">
-										<img src={product.image} alt="Produs" />
-										<p>{product.name}</p>
+										<Link to={`/product/${product.id}`}>
+											<img src={product.image} alt="Produs" />
+											<p>{product.name}</p>
+										</Link>
 									</div>
 									<p className="w-50">
 										{product.price} {product.currency}
 									</p>
-									<div onClick={() => props.removeFromFavourites({ id: product.id })}>
+									<div
+										onClick={() =>
+											props.removeFromFavourites({ id: product.id })
+										}
+									>
 										<Close />
 									</div>
 								</div>

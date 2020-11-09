@@ -4,6 +4,7 @@ import products from "../../utils/products.json";
 import "./Product.css";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/cartAction";
+import { addToFavourites } from "../../redux/favourites/favouritesAction";
 
 const Product = (props) => {
 	const [product, setProduct] = useState({});
@@ -19,7 +20,7 @@ const Product = (props) => {
 			return Number(productId) === product.id;
 		});
 		setProduct(currentProduct);
-	},[props]);
+	}, [props]);
 
 	return (
 		<Layout>
@@ -33,28 +34,47 @@ const Product = (props) => {
 						<p className="h3 text-danger">
 							{product.price} {product.currency}
 						</p>
-						<button
-							className="btn btn-dark mb-4 font-weight-bold"
-							onClick={() => {
-								props.addToCart({
-									product: {
-										id: product.id,
-										name: product.name,
-										price: product.price,
-										currency: product.currency,
-										image: product.image,
-									},
-								});
-							}}
-						>
-							Adaugă în coș
-						</button>
+						<div>
+							<button
+								className="btn btn-dark mb-4 font-weight-bold"
+								onClick={() => {
+									props.addToCart({
+										product: {
+											id: product.id,
+											name: product.name,
+											price: product.price,
+											currency: product.currency,
+											image: product.image,
+										},
+									});
+								}}
+							>
+								Add to cart
+							</button>
+						</div>
+						<div>
+							<button
+								className="btn btn-dark mb-4 font-weight-bold"
+								onClick={() => {
+									props.addToFavourites({
+										product: {
+											id: product.id,
+											name: product.name,
+											price: product.price,
+											currency: product.currency,
+											image: product.image,
+										},
+									});
+								}}
+							>
+								Add to favourites
+							</button>
+						</div>
 						<p>
-							<span className="font-weight-bold">Mărime</span>: {product.size}
+							<span className="font-weight-bold">Size</span>: {product.size}
 						</p>
 						<p>
-							<span className="font-weight-bold">Culoare</span>:{" "}
-							{product.colour}
+							<span className="font-weight-bold">Color</span>: {product.colour}
 						</p>
 						<p>
 							<span className="font-weight-bold">Material</span>:{" "}
@@ -63,7 +83,7 @@ const Product = (props) => {
 						<p>
 							<span className="font-weight-bold">Brand</span>: {product.brand}
 						</p>
-						<p className="font-weight-bold mb-1">Descriere:</p>
+						<p className="font-weight-bold mb-1">Description:</p>
 						<p>{product.description}</p>
 					</div>
 				</div>
@@ -75,6 +95,7 @@ const Product = (props) => {
 function mapDispatchToProps(dispatch) {
 	return {
 		addToCart: (payload) => dispatch(addToCart(payload)),
+		addToFavourites: (payload) => dispatch(addToFavourites(payload)),
 	};
 }
 
