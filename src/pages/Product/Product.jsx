@@ -5,22 +5,36 @@ import "./Product.css";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/cartAction";
 import { addToFavourites } from "../../redux/favourites/favouritesAction";
+import { Processor, VideoCard, PowerSupply, Storage, Ram, Motherboard } from "../../utils/ProductItemsData";
+
 
 const Product = (props) => {
-	const [product, setProduct] = useState({});
+    const [product, setProduct] = useState({});
+    const { match } = props;
+    const productId = match.params.productId;
 
-	useEffect(() => {
-		const { match } = props;
-		const productId = match.params.productId;
-		const categoryValues = Object.values(products);
+    const categoryValues = Object.values(products);
+    const getCategory = () => {
+        categoryValues.forEach((category) => {
+            category.items.forEach((item)=> {
+                if(item.id === productId){
+                    console.log(category);
+                    return category;
+                }
+            })
+        })
+    }
+
+    useEffect(() => {
 		const productItems = categoryValues.reduce((acc, category) => {
-			return [...acc, ...category.items];
-		}, []);
+            return [...acc, ...category.items];
+        }, []);
 		const currentProduct = productItems.find((product) => {
 			return Number(productId) === product.id;
 		});
 		setProduct(currentProduct);
-	}, [props]);
+    }, [props]);
+    
 
 	return (
 		<Layout>
@@ -70,21 +84,58 @@ const Product = (props) => {
 								Add to favourites
 							</button>
 						</div>
-						<p>
-							<span className="font-weight-bold">Size</span>: {product.size}
-						</p>
-						<p>
-							<span className="font-weight-bold">Color</span>: {product.colour}
-						</p>
-						<p>
-							<span className="font-weight-bold">Material</span>:{" "}
-							{product.material}
-						</p>
-						<p>
-							<span className="font-weight-bold">Brand</span>: {product.brand}
-						</p>
-						<p className="font-weight-bold mb-1">Description:</p>
-						<p>{product.description}</p>
+                        {
+                            getCategory()==="processor"?
+                                <Processor
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : getCategory()==="video-card"?
+                                <VideoCard
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : getCategory()==="motherboard"?
+                                <Motherboard
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : getCategory()==="ram"?
+                                <Ram
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : getCategory()==="storage"?
+                                <Storage
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : getCategory()==="power-supply"?
+                                <PowerSupply
+                                    baseFrequency={product.baseFrequency}
+                                    boostFrequency={product.boostFrequency}
+                                    cores={product.cores}
+                                    threads={product.threads}
+                                    description={product.description}
+                                />
+                            : null
+                        }
+						
 					</div>
 				</div>
 			</div>

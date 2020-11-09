@@ -22,13 +22,13 @@ const Favourites = (props) => {
 									className="d-flex justify-content-between align-items-center text-center"
 									key={product.id}
 								>
-									<div className="w-50 d-flex flex-column justify-content-center align-items-center">
+									<div className="w-50 d-flex flex-column justify-content-center align-items-center pl-2">
 										<Link to={`/product/${product.id}`}>
 											<img src={product.image} alt="Produs" />
 											<p>{product.name}</p>
 										</Link>
 									</div>
-									<p className="w-50">
+									<p className="w-50 pl-5">
 										{product.price} {product.currency}
 									</p>
 									<div

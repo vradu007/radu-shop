@@ -6,9 +6,11 @@
                 "name": "Ryzen 9 5950x",
                 "price": 799,
                 "currency": "USD",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/UCA6JoM.jpg",
                 "cores": 16,
                 "threads": 32,
+                "baseFrequency": 3.4,
+                "boostFrequency": 4.9,
                 "build-process": "7nm",
                 "producer": "AMD",
                 "description": "The best gaming processor on the market"
@@ -18,9 +20,11 @@
                 "name": "Ryzen 9 5900x",
                 "price": 549,
                 "currency": "USD",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/UCA6JoM.jpg",
                 "cores": 12,
                 "threads": 24,
+                "baseFrequency": 3.7,
+                "boostFrequency": 4.8,
                 "build-process": "7nm",
                 "producer": "AMD",
                 "description": "The flagship - The battleship"
@@ -30,70 +34,99 @@
                 "name": "Ryzen 5 5600x",
                 "price": 299,
                 "currency": "USD",
-                "image": "https://i.imgur.com/Rz8lVQa.jpg",
+                "image": "https://i.imgur.com/pgh67RU.jpg",
                 "cores": 6,
                 "threads": 12,
+                "baseFrequency": 3.7,
+                "boostFrequency": 4.6,
                 "build-process": "7nm",
                 "producer": "AMD",
                 "description": "The best bang for the buck gaming option"
+            },
+            {
+                "id": 4,
+                "name": "Intel i9 10900k",
+                "price": 529,
+                "currency": "USD",
+                "image": "https://i.imgur.com/AvQn8eN.jpg",
+                "cores": 10,
+                "threads": 20,
+                "baseFrequency": 3.7,
+                "boostFrequency": 5.3,
+                "build-process": "14nm",
+                "producer": "Intel",
+                "description": "Intel's best at work"
+            },
+            {
+                "id": 5,
+                "name": "Intel i7 10700k",
+                "price": 399,
+                "currency": "USD",
+                "image": "https://i.imgur.com/iSCZmgO.jpg",
+                "cores": 8,
+                "threads": 16,
+                "baseFrequency": 3.8,
+                "boostFrequency": 5.1,
+                "build-process": "14nm",
+                "producer": "Intel",
+                "description": "Gaming powerhouse"
+            },
+            {
+                "id": 6,
+                "name": "Intel i5 10600k",
+                "price": 299,
+                "currency": "USD",
+                "image": "https://i.imgur.com/RxK7cjn.jpg",
+                "cores": 6,
+                "threads": 12,
+                "baseFrequency": 4.1,
+                "boostFrequency": 4.8,
+                "build-process": "14nm",
+                "producer": "Intel",
+                "description": "Mid-range powerhouse"
             }
         ],
-        "image": "https://i.imgur.com/X0qldXO.jpg",
+        "image": "https://i.imgur.com/vZTEOKU.jpg",
         "name": "Processors",
         "description": "The heart of any pc build!"
     },
     "video-cards": {
         "items": [
             {
-                "id": 4,
-                "name": "Pulovăr finuț cu guler",
-                "price": 95,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/6afzuEr.jpg",
-                "size": "L",
-                "colour": "Maro",
-                "material": "Cașmir",
-                "brand": "DS Damat",
-                "description": "Pulovăr din cașmir, slim fit, colecția toamnă-iarnă 2019, DS Damat."
-            },
-            {
-                "id": 5,
-                "name": "Pulovăr multicolor",
-                "price": 105,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/s0VytKc.jpg",
-                "size": "L",
-                "colour": "Multicolor",
-                "material": "Bumbac",
-                "brand": "McNeal",
-                "description": "Pulovăr multicolor, colecția toamnă-iarnă 209, McNeal."
-            },
-            {
-                "id": 6,
-                "name": "Pulovăr călduros și frumos",
-                "price": 165,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/BWGgzlK.jpg",
-                "size": "L",
-                "colour": "Multicolor",
-                "material": "Lână",
-                "brand": "SELECTED",
-                "description": "Pulovăr din lână, în carouri, colecția toamnă-iarnă 2019, SELECTED."
-            },
-            {
                 "id": 7,
-                "name": "Pulovăr din lână",
-                "price": 160,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/dTcMbHT.jpg",
-                "size": "L",
-                "colour": "Crem",
-                "material": "Lână",
-                "brand": "Massimo Dutti",
-                "description": "Pulovăr din lână cu model, colecția toamnă-iarnă 2019, Massimo Dutti."
+                "name": "RTX 3080",
+                "price": 699,
+                "currency": "USD",
+                "image": "https://i.imgur.com/ZMJtwZ4.jpg",
+                "target-rezolution": "4K",
+                "VRAM": "10GB",
+                "brand": "Nvidia",
+                "description": "The best 4K video card on the market"
+            },
+            {
+                "id": 8,
+                "name": "RTX 3070",
+                "price": 499,
+                "currency": "USD",
+                "image": "https://i.imgur.com/3fWQuYP.jpg",
+                "target-rezolution": "2K/4K",
+                "VRAM": "8GB",
+                "brand": "Nvidia",
+                "description": "Faster than RTX 2080TI"
+            },
+            {
+                "id": 9,
+                "name": "Radeon RX 6800XT",
+                "price": 649,
+                "currency": "USD",
+                "image": "https://i.imgur.com/8DSZxs2.jpg",
+                "target-rezolution": "4K",
+                "VRAM": "16GB",
+                "brand": "AMD",
+                "description": "Taking the fight to Nvidia"
             }
         ],
-        "image": "https://i.imgur.com/SZU7liE.jpg",
+        "image": "https://i.imgur.com/9A1DzQb.jpg",
         "name": "Video Cards",
         "description": "The gaming powerhouses getting you through your gaming sessions."
     },
@@ -124,7 +157,7 @@
                 "description": "Blugi negri, slim fit, colecția toamnă-iarnă 2019, DS Damat."
             }
         ],
-        "image": "https://i.imgur.com/srQCDRN.jpg",
+        "image": "https://i.imgur.com/pBrEPKE.jpg",
         "name": "Motherboards",
         "description": "The backbone of your brand new pc"
     },
@@ -155,7 +188,7 @@
                 "description": "Geacă bleumarin cu glugă detașabilă, colecția toamnă-iarnă 2019, DS Damat."
             }
         ],
-        "image": "https://i.imgur.com/81I6Oab.jpg",
+        "image": "https://i.imgur.com/PLnNXkt.jpg",
         "name": "Ram modules",
         "description": "Speed up your performance"
     },
@@ -198,7 +231,7 @@
                 "description": "Tricoul purtat de Borussia Dortmund în sezonul competițional 2018-2019, cu numarul 7 și numele 'SANCHO'. Tricoul este semnat de portarul Borussiei, Roman Burki."
             }
         ],
-        "image": "https://i.imgur.com/l27WtFL.jpg",
+        "image": "https://i.imgur.com/ykTxdBh.jpg",
         "name": "Storage",
         "description": "You won't have time to grab a coffee while the game is loading :("
     },
@@ -229,7 +262,7 @@
                 "description": "Mănuși din piele, cu model, din colecția toamnă-iarnă 2018, DS Damat."
             }
         ],
-        "image": "https://i.imgur.com/qw3wDj8.jpg",
+        "image": "https://i.imgur.com/WaXMLWW.jpg",
         "name": "Power supplies",
         "description": "Even supports the RTX 3000 series (paper edition)"
     }
