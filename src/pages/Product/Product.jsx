@@ -14,11 +14,12 @@ const Product = (props) => {
     const productId = match.params.productId;
 
     const categoryValues = Object.values(products);
+    
+    //unreachable
     const getCategory = () => {
         categoryValues.forEach((category) => {
             category.items.forEach((item)=> {
                 if(item.id === productId){
-                    console.log(category);
                     return category;
                 }
             })
@@ -85,7 +86,7 @@ const Product = (props) => {
 							</button>
 						</div>
                         {
-                            getCategory()==="processor"?
+                            "processor"==="processor"?
                                 <Processor
                                     baseFrequency={product.baseFrequency}
                                     boostFrequency={product.boostFrequency}
