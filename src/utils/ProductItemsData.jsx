@@ -14,6 +14,9 @@ const Processor = (props) => {
 			<p>
 				<span className="font-weight-bold">Cores</span>: {props.cores}
 			</p>
+            <p>
+				<span className="font-weight-bold">Build process</span>: {props.buildProcess}
+			</p>
 			<p>
 				<span className="font-weight-bold">Threads</span>: {props.threads}
 			</p>
@@ -27,18 +30,15 @@ const VideoCard = (props) => {
 	return (
 		<div>
 			<p>
-				<span className="font-weight-bold">Base Frequency VideoCard</span>:{" "}
-				{props.baseFrequency}
+				<span className="font-weight-bold">Target Resolution</span>:{" "}
+				{props.targetResolution}
 			</p>
 			<p>
-				<span className="font-weight-bold">Boost frequency</span>:{" "}
-				{props.boostFrequency}
+				<span className="font-weight-bold">VRAM</span>:{" "}
+				{props.vram}
 			</p>
 			<p>
-				<span className="font-weight-bold">Cores</span>: {props.cores}
-			</p>
-			<p>
-				<span className="font-weight-bold">Threads</span>: {props.threads}
+				<span className="font-weight-bold">Brand</span>: {props.brand}
 			</p>
 			<p className="font-weight-bold mb-1">Description:</p>
 			<p>{props.description}</p>

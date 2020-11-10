@@ -86,23 +86,23 @@ const Product = (props) => {
 							</button>
 						</div>
                         {
-                            "processor"==="processor"?
+                            getCategory()==="processor"?
                                 <Processor
                                     baseFrequency={product.baseFrequency}
                                     boostFrequency={product.boostFrequency}
                                     cores={product.cores}
                                     threads={product.threads}
                                     description={product.description}
+                                    buildProcess={product.buildProcess}
                                 />
-                            : getCategory()==="video-card"?
+                            : getCategory()==="video-cards"?
                                 <VideoCard
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
+                                    targetResolution={product.targetResolution}
+                                    vram={product.vram}
+                                    brand={product.brand}
                                     description={product.description}
                                 />
-                            : getCategory()==="motherboard"?
+                            : getCategory()==="motherboards"?
                                 <Motherboard
                                     baseFrequency={product.baseFrequency}
                                     boostFrequency={product.boostFrequency}
@@ -110,7 +110,7 @@ const Product = (props) => {
                                     threads={product.threads}
                                     description={product.description}
                                 />
-                            : getCategory()==="ram"?
+                            : getCategory()==="ram-modules"?
                                 <Ram
                                     baseFrequency={product.baseFrequency}
                                     boostFrequency={product.boostFrequency}

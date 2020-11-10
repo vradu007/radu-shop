@@ -11,7 +11,7 @@
                 "threads": 32,
                 "baseFrequency": 3.4,
                 "boostFrequency": 4.9,
-                "build-process": "7nm",
+                "buildProcess": "7nm",
                 "producer": "AMD",
                 "description": "The best gaming processor on the market"
             },
@@ -25,7 +25,7 @@
                 "threads": 24,
                 "baseFrequency": 3.7,
                 "boostFrequency": 4.8,
-                "build-process": "7nm",
+                "buildProcess": "7nm",
                 "producer": "AMD",
                 "description": "The flagship - The battleship"
             },
@@ -39,7 +39,7 @@
                 "threads": 12,
                 "baseFrequency": 3.7,
                 "boostFrequency": 4.6,
-                "build-process": "7nm",
+                "buildProcess": "7nm",
                 "producer": "AMD",
                 "description": "The best bang for the buck gaming option"
             },
@@ -53,7 +53,7 @@
                 "threads": 20,
                 "baseFrequency": 3.7,
                 "boostFrequency": 5.3,
-                "build-process": "14nm",
+                "buildProcess": "14nm",
                 "producer": "Intel",
                 "description": "Intel's best at work"
             },
@@ -67,7 +67,7 @@
                 "threads": 16,
                 "baseFrequency": 3.8,
                 "boostFrequency": 5.1,
-                "build-process": "14nm",
+                "buildProcess": "14nm",
                 "producer": "Intel",
                 "description": "Gaming powerhouse"
             },
@@ -81,7 +81,7 @@
                 "threads": 12,
                 "baseFrequency": 4.1,
                 "boostFrequency": 4.8,
-                "build-process": "14nm",
+                "buildProcess": "14nm",
                 "producer": "Intel",
                 "description": "Mid-range powerhouse"
             }
@@ -98,8 +98,8 @@
                 "price": 699,
                 "currency": "USD",
                 "image": "https://i.imgur.com/ZMJtwZ4.jpg",
-                "target-rezolution": "4K",
-                "VRAM": "10GB",
+                "targetResolution": "4K",
+                "vram": "10GB",
                 "brand": "Nvidia",
                 "description": "The best 4K video card on the market"
             },
@@ -109,8 +109,8 @@
                 "price": 499,
                 "currency": "USD",
                 "image": "https://i.imgur.com/3fWQuYP.jpg",
-                "target-rezolution": "2K/4K",
-                "VRAM": "8GB",
+                "targetResolution": "2K/4K",
+                "vram": "8GB",
                 "brand": "Nvidia",
                 "description": "Faster than RTX 2080TI"
             },
@@ -120,8 +120,8 @@
                 "price": 649,
                 "currency": "USD",
                 "image": "https://i.imgur.com/8DSZxs2.jpg",
-                "target-rezolution": "4K",
-                "VRAM": "16GB",
+                "targetResolution": "4K",
+                "vram": "16GB",
                 "brand": "AMD",
                 "description": "Taking the fight to Nvidia"
             }
