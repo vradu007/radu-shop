@@ -34,9 +34,9 @@ const Product = (props) => {
 	}, [categoryValues, productId]);
 
 	const conditionallyRender = (category) => {
-        console.log(category);
-		switch (category.name) {
-			case "processors":
+        console.log(category[0].name);
+		switch (category[0].name) {
+			case "Processors":
 				return (
 					<Processor
 						baseFrequency={product.baseFrequency}
@@ -47,7 +47,7 @@ const Product = (props) => {
 						buildProcess={product.buildProcess}
 					/>
 				);
-			case "video-cards":
+			case "Video Cards":
 				return (
 					<VideoCard
 						targetResolution={product.targetResolution}
@@ -56,7 +56,7 @@ const Product = (props) => {
 						description={product.description}
 					/>
 				);
-			case "motherboards":
+			case "Motherboards":
 				return (
 					<Motherboard
 						size={product.size}
@@ -66,7 +66,7 @@ const Product = (props) => {
 						description={product.description}
 					/>
 				);
-			case "ram-modules":
+			case "Ram-modules":
 				return (
 					<Ram
 						baseFrequency={product.baseFrequency}
@@ -76,7 +76,7 @@ const Product = (props) => {
 						description={product.description}
 					/>
 				);
-			case "storage":
+			case "Storage":
 				return (
 					<Storage
 						baseFrequency={product.baseFrequency}
@@ -86,7 +86,7 @@ const Product = (props) => {
 						description={product.description}
 					/>
 				);
-			case "power-supply":
+			case "Power Supplies":
 				return (
 					<PowerSupply
 						baseFrequency={product.baseFrequency}
