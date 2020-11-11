@@ -50,18 +50,18 @@ const Motherboard = (props) => {
 	return (
 		<div>
 			<p>
-				<span className="font-weight-bold">Base Frequency</span>:{" "}
-				{props.baseFrequency}
+				<span className="font-weight-bold">Format</span>:{" "}
+				{props.size}
 			</p>
 			<p>
-				<span className="font-weight-bold">Boost frequency</span>:{" "}
-				{props.boostFrequency}
+				<span className="font-weight-bold">Compatible manufacturer</span>:{" "}
+				{props.compatibleBrand}
 			</p>
 			<p>
-				<span className="font-weight-bold">Cores</span>: {props.cores}
+				<span className="font-weight-bold">Brand</span>: {props.brand}
 			</p>
 			<p>
-				<span className="font-weight-bold">Threads</span>: {props.threads}
+				<span className="font-weight-bold">Socket</span>: {props.socket}
 			</p>
 			<p className="font-weight-bold mb-1">Description:</p>
 			<p>{props.description}</p>

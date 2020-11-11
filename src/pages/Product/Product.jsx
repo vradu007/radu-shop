@@ -1,41 +1,113 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Layout from "../../components/Layout/Layout";
 import products from "../../utils/products.json";
 import "./Product.css";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/cartAction";
 import { addToFavourites } from "../../redux/favourites/favouritesAction";
-import { Processor, VideoCard, PowerSupply, Storage, Ram, Motherboard } from "../../utils/ProductItemsData";
-
+import {
+	Processor,
+	VideoCard,
+	PowerSupply,
+	Storage,
+	Ram,
+	Motherboard,
+} from "../../utils/ProductItemsData";
 
 const Product = (props) => {
-    const [product, setProduct] = useState({});
-    const { match } = props;
-    const productId = match.params.productId;
+	const [product, setProduct] = useState({});
+	const { match } = props;
+	const productId = match.params.productId;
 
-    const categoryValues = Object.values(products);
-    
-    //unreachable
-    const getCategory = () => {
-        categoryValues.forEach((category) => {
-            category.items.forEach((item)=> {
-                if(item.id === productId){
-                    return category;
-                }
-            })
-        })
-    }
+	const categoryValues = Object.values(products);
 
-    useEffect(() => {
+	// useMemo takes a function that is called when its dependencies change.
+	// we use a lambda - () => expression - so the return value is implicit
+	const category = useState(() => {
+		for (const category of categoryValues) {
+			for (const item of category.items) {
+				if (item.id == productId) {
+					return category;
+				}
+			}
+		}
+	}, [categoryValues, productId]);
+
+	const conditionallyRender = (category) => {
+        console.log(category);
+		switch (category.name) {
+			case "processors":
+				return (
+					<Processor
+						baseFrequency={product.baseFrequency}
+						boostFrequency={product.boostFrequency}
+						cores={product.cores}
+						threads={product.threads}
+						description={product.description}
+						buildProcess={product.buildProcess}
+					/>
+				);
+			case "video-cards":
+				return (
+					<VideoCard
+						targetResolution={product.targetResolution}
+						vram={product.vram}
+						brand={product.brand}
+						description={product.description}
+					/>
+				);
+			case "motherboards":
+				return (
+					<Motherboard
+						size={product.size}
+						compatibleBrand={product.compatibleBrand}
+						brand={product.brand}
+						socket={product.socket}
+						description={product.description}
+					/>
+				);
+			case "ram-modules":
+				return (
+					<Ram
+						baseFrequency={product.baseFrequency}
+						boostFrequency={product.boostFrequency}
+						cores={product.cores}
+						threads={product.threads}
+						description={product.description}
+					/>
+				);
+			case "storage":
+				return (
+					<Storage
+						baseFrequency={product.baseFrequency}
+						boostFrequency={product.boostFrequency}
+						cores={product.cores}
+						threads={product.threads}
+						description={product.description}
+					/>
+				);
+			case "power-supply":
+				return (
+					<PowerSupply
+						baseFrequency={product.baseFrequency}
+						boostFrequency={product.boostFrequency}
+						cores={product.cores}
+						threads={product.threads}
+						description={product.description}
+					/>
+				);
+		}
+	};
+
+	useEffect(() => {
 		const productItems = categoryValues.reduce((acc, category) => {
-            return [...acc, ...category.items];
-        }, []);
+			return [...acc, ...category.items];
+		}, []);
 		const currentProduct = productItems.find((product) => {
 			return Number(productId) === product.id;
 		});
 		setProduct(currentProduct);
-    }, [props]);
-    
+	}, [props]);
 
 	return (
 		<Layout>
@@ -86,57 +158,8 @@ const Product = (props) => {
 							</button>
 						</div>
                         {
-                            getCategory()==="processor"?
-                                <Processor
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
-                                    description={product.description}
-                                    buildProcess={product.buildProcess}
-                                />
-                            : getCategory()==="video-cards"?
-                                <VideoCard
-                                    targetResolution={product.targetResolution}
-                                    vram={product.vram}
-                                    brand={product.brand}
-                                    description={product.description}
-                                />
-                            : getCategory()==="motherboards"?
-                                <Motherboard
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
-                                    description={product.description}
-                                />
-                            : getCategory()==="ram-modules"?
-                                <Ram
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
-                                    description={product.description}
-                                />
-                            : getCategory()==="storage"?
-                                <Storage
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
-                                    description={product.description}
-                                />
-                            : getCategory()==="power-supply"?
-                                <PowerSupply
-                                    baseFrequency={product.baseFrequency}
-                                    boostFrequency={product.boostFrequency}
-                                    cores={product.cores}
-                                    threads={product.threads}
-                                    description={product.description}
-                                />
-                            : null
+                            conditionallyRender(category)
                         }
-						
 					</div>
 				</div>
 			</div>

@@ -133,28 +133,40 @@
     "motherboards": {
         "items": [
             {
-                "id": 8,
-                "name": "Blugi bleumarin slim fit",
-                "price": 35,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/VhpATO8.jpg",
-                "size": "34",
-                "colour": "Bleumarin închis",
-                "material": "Blug",
-                "brand": "DS Damat",
-                "description": "Blugi bleumarin, slim fit, colecția primăvară-vară 2019, DS Damat."
+                "id": 10,
+                "name": "B550 Aorus Pro",
+                "price": 129,
+                "currency": "USD",
+                "image": "https://i.imgur.com/k1tfBmP.png",
+                "size": "ATX",
+                "compatibleBrand": "AMD",
+                "brand": "Gigabyte",
+                "socket": "AM4",
+                "description": "Best entry level AMD motherboard"
             },
             {
-                "id": 9,
-                "name": "Blugi negri slim fit",
-                "price": 40,
-                "currency": "LEI",
-                "image": "https://i.imgur.com/weiI07t.jpg",
-                "size": "34",
-                "colour": "Negru-gri",
-                "material": "Blug",
-                "brand": "DS Damat",
-                "description": "Blugi negri, slim fit, colecția toamnă-iarnă 2019, DS Damat."
+                "id": 11,
+                "name": "X570 Gaming X",
+                "price": 319,
+                "currency": "USD",
+                "image": "https://i.imgur.com/ObFRqh9.jpg",
+                "size": "Extended ATX",
+                "compatibleBrand": "AMD",
+                "brand": "Gigabyte",
+                "socket": "AM4",
+                "description": "Best high-end AMD motherboard"
+            },
+            {
+                "id": 12,
+                "name": "Rog Strix Z490-F Gaming",
+                "price": 349,
+                "currency": "USD",
+                "image": "https://i.imgur.com/TM2Tkun.jpg",
+                "size": "Extended ATX",
+                "compatibleBrand": "Intel",
+                "brand": "Asus",
+                "socket": "LGA 1200",
+                "description": "Best high-end Intel motherboard"
             }
         ],
         "image": "https://i.imgur.com/pBrEPKE.jpg",
