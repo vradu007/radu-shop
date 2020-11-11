@@ -21,8 +21,6 @@ const Product = (props) => {
 
 	const categoryValues = Object.values(products);
 
-	// useMemo takes a function that is called when its dependencies change.
-	// we use a lambda - () => expression - so the return value is implicit
 	const category = useState(() => {
 		for (const category of categoryValues) {
 			for (const item of category.items) {
