@@ -6,7 +6,7 @@ import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import "./Login.css";
 import { connect } from "react-redux";
 import { loginUser } from "../../redux/user/userAction";
-import { providerConstants, reduxConstants} from "../../utils/constants";
+import { providerConstants} from "../../utils/constants";
 
 const Login = (props) => {
 

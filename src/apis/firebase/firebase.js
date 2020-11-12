@@ -15,6 +15,7 @@ const signInWithGoogle = () => {
 }
 
 const signInWithFacebook = () => {
+    console.log("in firebase.js")
     return firebase.auth().signInWithPopup(facebookProvider);
 }
 
