@@ -18,6 +18,7 @@ const App = () => {
       <Switch>
         <Route path="/login" component={Login}/>
         <Route exact path="/" component={Home}/>
+        <Route path="/radu-shop/build" component={Home}/>
         <Route path="/cart" component={Cart}/>
         <Route path="/favourites" component={Favourites}/>
         <Route path="/about" component={About}/>
