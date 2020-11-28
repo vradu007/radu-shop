@@ -30,4 +30,6 @@ After cloning the repo, just run `yarn` in a terminal in the project folder, and
 
 The first order of business should be getting rid of the facebook login bug..:).
 
+After that, I will look into deploying the app on online on Heroku or GitHub pages.
+
 I am looking to learn node.js and express.js, and after I am done learning these technologies, I hope to be able to create a backend for this application.
