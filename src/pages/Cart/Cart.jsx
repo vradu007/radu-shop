@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeFromCart } from "../../redux/cart/cartAction";
+import getImageUrl from "../../utils/imageUrl";
 import { ReactComponent as Close } from "../../assets/icons/close.svg";
 import Layout from "../../components/Layout/Layout";
 import "./Cart.css";
@@ -35,7 +36,7 @@ const Cart = (props) => {
 								>
 									<div className="w-25 d-flex flex-column justify-content-center align-items-center">
 										<Link to={`/product/${product.id}`}>
-											<img src={product.image} alt="Produs" />
+											<img src={getImageUrl(product.image)} alt="Produs" />
 											<p>{product.name}</p>
 										</Link>
 									</div>

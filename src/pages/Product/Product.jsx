@@ -5,6 +5,7 @@ import "./Product.css";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/cart/cartAction";
 import { addToFavourites } from "../../redux/favourites/favouritesAction";
+import getImageUrl from "../../utils/imageUrl";
 import {
 	Processor,
 	VideoCard,
@@ -113,7 +114,7 @@ const Product = (props) => {
 				<h1 className="my-5 h2">{product.name}</h1>
 				<div className="product-info d-flex">
 					<div className="image-wrapper d-flex mr-5">
-						<img src={product.image} alt="Product presentation" />
+						<img src={getImageUrl(product.image)} alt="Product presentation" />
 					</div>
 					<div className="product-details">
 						<p className="h3 text-danger">

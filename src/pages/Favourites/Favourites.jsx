@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Layout from "../../components/Layout/Layout";
 import { Link } from "react-router-dom";
 import { removeFromFavourites } from "../../redux/favourites/favouritesAction";
+import getImageUrl from "../../utils/imageUrl";
 import { ReactComponent as Close } from "../../assets/icons/close.svg";
 import "./Favourites.css";
 
@@ -24,7 +25,7 @@ const Favourites = (props) => {
 								>
 									<div className="w-50 d-flex flex-column justify-content-center align-items-center pl-2">
 										<Link to={`/product/${product.id}`}>
-											<img src={product.image} alt="Produs" />
+											<img src={getImageUrl(product.image)} alt="Produs" />
 											<p>{product.name}</p>
 										</Link>
 									</div>

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { addToCart } from "../../../redux/cart/cartAction";
 import { addToFavourites } from "../../../redux/favourites/favouritesAction";
 import { Link } from "react-router-dom";
+import getImageUrl from "../../../utils/imageUrl";
 
 const ProductItem = (props) => {
 	const { name, price, currency, image, id } = props;
@@ -14,7 +15,7 @@ const ProductItem = (props) => {
 				to={`/product/${id}`}
 				className="d-flex flex-column align-items-center"
 			>
-				<img src={image} alt="productPhoto" className="mb-2" />
+				<img src={getImageUrl(image)} alt="productPhoto" className="mb-2" />
 				<p className="mb-1 text-center">{name}</p>
 				<p className="text-center">{price + currency}</p>
 			</Link>
