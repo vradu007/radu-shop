@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
@@ -9,17 +9,14 @@ import { loginUser } from "../../redux/user/userAction";
 import { providerConstants} from "../../utils/constants";
 
 const Login = (props) => {
-
-    const [redirect, changeRedirect] = useState(false);
-	const { user, history, signInWithGoogle, signInWithFacebook } = props;
+	const { user, error, history, signInWithGoogle, signInWithFacebook } = props;
 	useEffect(() => {
-        if(redirect){
+		if (user) {
             history.push("/");
         }
 	}, [user, history]);
 
     const handleClick = (provider) => {
-        changeRedirect(true);
         switch(provider){
             case providerConstants.facebook:
                 signInWithFacebook();
@@ -37,6 +34,7 @@ const Login = (props) => {
 			</Link>
 			<h1 className="h2">Login</h1>
 			<p>Choose the provider you want to use to login:</p>
+			{error ? <p className="text-danger">{error.message || "Login failed. Please try again."}</p> : null}
 			<button
 				className="btn btn-outline-dark d-flex align-items-center"
                 onClick={() => handleClick(providerConstants.google)}
@@ -58,6 +56,7 @@ const Login = (props) => {
 function mapStateToProps(state) {
 	return {
 		user: state.user.data,
+		error: state.user.error,
 	};
 }
 
