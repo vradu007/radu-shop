@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64d8d79668a6145c991cc7fa4ae41540",
+    "revision": "f85b52c20ed27c2ce9b2d172011e80b5",
     "url": "/radu-shop/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radu-shop/static/css/2.dec86d71.chunk.css"
   },
   {
-    "revision": "7646b82d2629d579b5af",
+    "revision": "b08edacd17843ac5115d",
     "url": "/radu-shop/static/css/main.6f344f91.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radu-shop/static/js/2.e951b5b8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7646b82d2629d579b5af",
-    "url": "/radu-shop/static/js/main.bcbb5231.chunk.js"
+    "revision": "b08edacd17843ac5115d",
+    "url": "/radu-shop/static/js/main.55a90e9b.chunk.js"
   },
   {
     "revision": "99054a34dbbdb07342ae",

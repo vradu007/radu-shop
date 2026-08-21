@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/radu-shop/static/css/main.6f344f91.chunk.css",
-    "main.js": "/radu-shop/static/js/main.bcbb5231.chunk.js",
-    "main.js.map": "/radu-shop/static/js/main.bcbb5231.chunk.js.map",
+    "main.js": "/radu-shop/static/js/main.55a90e9b.chunk.js",
+    "main.js.map": "/radu-shop/static/js/main.55a90e9b.chunk.js.map",
     "runtime-main.js": "/radu-shop/static/js/runtime-main.4c5ad571.js",
     "runtime-main.js.map": "/radu-shop/static/js/runtime-main.4c5ad571.js.map",
     "static/css/2.dec86d71.chunk.css": "/radu-shop/static/css/2.dec86d71.chunk.css",
     "static/js/2.e951b5b8.chunk.js": "/radu-shop/static/js/2.e951b5b8.chunk.js",
     "static/js/2.e951b5b8.chunk.js.map": "/radu-shop/static/js/2.e951b5b8.chunk.js.map",
     "index.html": "/radu-shop/index.html",
-    "precache-manifest.f3ad8670cbedf370f29a9b24f05eb504.js": "/radu-shop/precache-manifest.f3ad8670cbedf370f29a9b24f05eb504.js",
+    "precache-manifest.96e51fb73d1424a88da6781f2817a08e.js": "/radu-shop/precache-manifest.96e51fb73d1424a88da6781f2817a08e.js",
     "service-worker.js": "/radu-shop/service-worker.js",
     "static/css/2.dec86d71.chunk.css.map": "/radu-shop/static/css/2.dec86d71.chunk.css.map",
     "static/css/main.6f344f91.chunk.css.map": "/radu-shop/static/css/main.6f344f91.chunk.css.map",
@@ -29,6 +29,6 @@
     "static/css/2.dec86d71.chunk.css",
     "static/js/2.e951b5b8.chunk.js",
     "static/css/main.6f344f91.chunk.css",
-    "static/js/main.bcbb5231.chunk.js"
+    "static/js/main.55a90e9b.chunk.js"
   ]
 }
