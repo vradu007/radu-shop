@@ -15,9 +15,13 @@
 		"redux": "^4.0.4",
 		"redux-thunk": "^2.3.0"
 	},
+	"devDependencies": {
+		"cross-env": "^7.0.3",
+		"redux-logger": "^3.0.6"
+	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+		"build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
 		"test": "react-scripts test",
         "eject": "react-scripts eject",
         "deploy": "gh-pages -d build"
@@ -36,8 +40,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"redux-logger": "^3.0.6"
 	}
 }
