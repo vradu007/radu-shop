@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "994de4fe11e7af9591bae01527c9aa58",
+    "revision": "8af559cdd8a30f31a5bbd9fd9d09d42f",
     "url": "/radu-shop/build/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radu-shop/build/static/css/2.dec86d71.chunk.css"
   },
   {
-    "revision": "9bae9991a70147fdb793",
-    "url": "/radu-shop/build/static/css/main.4ba8e6d3.chunk.css"
+    "revision": "810b2a18b6409dd727b2",
+    "url": "/radu-shop/build/static/css/main.6f344f91.chunk.css"
   },
   {
     "revision": "dd25ef0e305e8d7098fa",
@@ -20,24 +20,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radu-shop/build/static/js/2.e951b5b8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9bae9991a70147fdb793",
-    "url": "/radu-shop/build/static/js/main.9e5da8be.chunk.js"
+    "revision": "810b2a18b6409dd727b2",
+    "url": "/radu-shop/build/static/js/main.0427601a.chunk.js"
   },
   {
     "revision": "b01aa582bc5bf2b467c0",
     "url": "/radu-shop/build/static/js/runtime-main.6acf4f47.js"
   },
   {
-    "revision": "b41ee66a70d4a907834b2946742f3b8a",
-    "url": "/radu-shop/build/static/media/close.b41ee66a.svg"
+    "revision": "186adff2fc7dc6e8c0ebc0f9e38e017b",
+    "url": "/radu-shop/build/static/media/close.186adff2.svg"
   },
   {
     "revision": "b2252809367a5a66646d1853d477c025",
     "url": "/radu-shop/build/static/media/facebook.b2252809.svg"
   },
   {
-    "revision": "648cc3b4ec15006207a91af8a916e26d",
-    "url": "/radu-shop/build/static/media/github.648cc3b4.svg"
+    "revision": "ae93db78f06e846af8eaf6b14d141a94",
+    "url": "/radu-shop/build/static/media/github.ae93db78.svg"
   },
   {
     "revision": "81ad048ed858673aaca6cc2227076b8a",
@@ -48,19 +48,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/radu-shop/build/static/media/heart.d9b06de9.svg"
   },
   {
-    "revision": "173ca344d0b68783bf9f69f2e554e5cc",
-    "url": "/radu-shop/build/static/media/linkedin.173ca344.svg"
+    "revision": "4a6d218f7ff0f3a7ecb141420d051e57",
+    "url": "/radu-shop/build/static/media/linkedin.4a6d218f.svg"
   },
   {
-    "revision": "c4d17416856a8e299c17aef22680b139",
-    "url": "/radu-shop/build/static/media/mail.c4d17416.svg"
+    "revision": "8e9b3e26fb5d75b71506cdebe045865c",
+    "url": "/radu-shop/build/static/media/mail.8e9b3e26.svg"
   },
   {
-    "revision": "802cd03a0acab046d41deccc02c90a87",
-    "url": "/radu-shop/build/static/media/phone.802cd03a.svg"
+    "revision": "30523e399872ce62669a86c649ebbc82",
+    "url": "/radu-shop/build/static/media/phone.30523e39.svg"
   },
   {
-    "revision": "4eb6a9305e0b9b55be802ffa8bfc56c3",
-    "url": "/radu-shop/build/static/media/shopping-cart.4eb6a930.svg"
+    "revision": "3423dc9dc69ff812b3259c63363c8afd",
+    "url": "/radu-shop/build/static/media/shopping-cart.3423dc9d.svg"
   }
 ]);

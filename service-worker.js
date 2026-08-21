@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/radu-shop/build/precache-manifest.dc300ae4e391cf99e29fe9b6c08fe570.js"
+  "/radu-shop/build/precache-manifest.67b27095d24c9881e5592d89529c74aa.js"
 );
 
 self.addEventListener('message', (event) => {
